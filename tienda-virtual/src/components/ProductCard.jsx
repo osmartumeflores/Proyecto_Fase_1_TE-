@@ -18,7 +18,7 @@ export const ProductCard = ({ product }) => {
         <p className="product-category">{product.category}</p>
         <p className="product-description">{product.description}</p>
         <div className="product-footer">
-          <span className="product-price">${product.price.toFixed(2)}</span>
+          <span className="product-price">S/.{product.price.toFixed(2)}</span>
           <button 
             className="add-to-cart-btn"
             onClick={handleAddToCart}
