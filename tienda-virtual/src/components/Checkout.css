@@ -1,0 +1,167 @@
+.checkout-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.checkout-content {
+  background-color: white;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.checkout-content .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  z-index: 10;
+}
+
+.checkout-content .close-btn:hover {
+  color: #000;
+}
+
+.checkout-content h2 {
+  padding: 2rem 1.5rem 1rem;
+  margin: 0;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.checkout-form {
+  padding: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.form-section {
+  margin-bottom: 2rem;
+}
+
+.form-section h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 0.5rem;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.checkout-form input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-row input {
+  margin-bottom: 0;
+}
+
+.order-summary {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #eee;
+}
+
+.order-summary h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.total-amount {
+  font-weight: bold;
+  color: #764ba2;
+  font-size: 1.2rem;
+}
+
+.pay-btn {
+  width: 100%;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-bottom: 1rem;
+}
+
+.pay-btn:hover:not(:disabled) {
+  background-color: #229954;
+}
+
+.pay-btn:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+.demo-notice {
+  text-align: center;
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin: 0;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .checkout-content {
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-content h2 {
+    padding: 1.5rem 1rem 0.75rem;
+    font-size: 1.3rem;
+  }
+
+  .checkout-form {
+    padding: 1rem;
+  }
+}
