@@ -12,10 +12,12 @@ export const Cart = () => {
     return (
       <div className="cart-content">
         <h2>Carrito de Compras</h2>
-        <p className="empty-cart">Tu carrito está vacío</p>
-        <button onClick={() => navigate('/')}>
-          Continuar comprando
-        </button>
+        <div className="empty-cart">
+          <p>Tu carrito está vacío</p>
+          <button className="continue-shopping-btn" onClick={() => navigate('/')}>
+            Volver a la tienda
+          </button>
+        </div>
       </div>
     );
   }
@@ -28,6 +30,7 @@ export const Cart = () => {
         {cartItems.map(item => (
           <div key={item.id} className="cart-item">
             <img src={item.image} alt={item.name} className="cart-item-image" />
+            
             <div className="cart-item-info">
               <h4>{item.name}</h4>
               <p>S/ {item.price.toFixed(2)}</p>
@@ -43,10 +46,7 @@ export const Cart = () => {
               S/ {(item.price * item.quantity).toFixed(2)}
             </div>
 
-            <button 
-              className="remove-btn"
-              onClick={() => removeFromCart(item.id)}
-            >
+            <button className="remove-btn" onClick={() => removeFromCart(item.id)}>
               ✕
             </button>
           </div>
@@ -55,17 +55,24 @@ export const Cart = () => {
 
       <div className="cart-summary">
         <div className="summary-row">
+          <span>Subtotal:</span>
+          <span>S/ {totalPrice.toFixed(2)}</span>
+        </div>
+        <div className="summary-row">
+          <span>Envío:</span>
+          <span style={{ color: '#22c55e' }}>Gratis</span>
+        </div>
+        <div className="summary-row total">
           <span>Total:</span>
           <span>S/ {totalPrice.toFixed(2)}</span>
         </div>
       </div>
 
       <div className="cart-actions">
-        <button onClick={() => navigate('/checkout')}>
+        <button className="checkout-btn" onClick={() => navigate('/checkout')}>
           Proceder al Pago
         </button>
-
-        <button onClick={() => navigate('/')}>
+        <button className="continue-shopping-btn" onClick={() => navigate('/')}>
           Continuar Comprando
         </button>
       </div>
