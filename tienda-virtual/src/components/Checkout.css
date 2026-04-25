@@ -1,27 +1,30 @@
+/* Contenedor principal del modal (fondo oscuro) */
 .checkout-modal {
-  position: fixed;
+  position: fixed; /* Se queda fijo en pantalla */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+  justify-content: center; /* Centra horizontal */
+  align-items: center; /* Centra vertical */
+  z-index: 1000; /* Encima de todo */
 }
 
+/* Caja principal del checkout */
 .checkout-content {
   background-color: white;
   width: 100%;
-  max-width: 600px;
-  max-height: 90vh;
-  overflow-y: auto;
+  max-width: 600px; /* Tamaño máximo */
+  max-height: 90vh; /* Altura máxima */
+  overflow-y: auto; /* Scroll si se llena */
   border-radius: 8px;
   position: relative;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Botón cerrar */
 .checkout-content .close-btn {
   position: absolute;
   top: 1rem;
@@ -34,10 +37,12 @@
   z-index: 10;
 }
 
+/* Hover botón cerrar */
 .checkout-content .close-btn:hover {
   color: #000;
 }
 
+/* Título */
 .checkout-content h2 {
   padding: 2rem 1.5rem 1rem;
   margin: 0;
@@ -45,15 +50,18 @@
   color: #2c3e50;
 }
 
+/* Formulario */
 .checkout-form {
   padding: 1.5rem;
   padding-top: 0.5rem;
 }
 
+/* Sección del formulario */
 .form-section {
   margin-bottom: 2rem;
 }
 
+/* Subtítulos */
 .form-section h3 {
   color: #2c3e50;
   margin-bottom: 1rem;
@@ -62,6 +70,7 @@
   padding-bottom: 0.5rem;
 }
 
+/* Inputs */
 .checkout-form input {
   width: 100%;
   padding: 0.75rem;
@@ -72,22 +81,26 @@
   box-sizing: border-box;
 }
 
+/* Efecto al hacer focus */
 .checkout-form input:focus {
   outline: none;
   border-color: #667eea;
   box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
 }
 
+/* Fila de inputs (2 columnas) */
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
+/* Inputs dentro de la fila */
 .form-row input {
   margin-bottom: 0;
 }
 
+/* Resumen de compra */
 .order-summary {
   background-color: #f9f9f9;
   padding: 1.5rem;
@@ -96,11 +109,13 @@
   border: 1px solid #eee;
 }
 
+/* Título resumen */
 .order-summary h3 {
   margin-top: 0;
   color: #2c3e50;
 }
 
+/* Cada item del resumen */
 .summary-item {
   display: flex;
   justify-content: space-between;
@@ -108,12 +123,14 @@
   margin-bottom: 0.5rem;
 }
 
+/* Total */
 .total-amount {
   font-weight: bold;
   color: #764ba2;
   font-size: 1.2rem;
 }
 
+/* Botón pagar */
 .pay-btn {
   width: 100%;
   background-color: #27ae60;
@@ -128,15 +145,18 @@
   margin-bottom: 1rem;
 }
 
+/* Hover botón pagar */
 .pay-btn:hover:not(:disabled) {
   background-color: #229954;
 }
 
+/* Botón deshabilitado */
 .pay-btn:disabled {
   background-color: #bbb;
   cursor: not-allowed;
 }
 
+/* Mensaje de demo */
 .demo-notice {
   text-align: center;
   color: #e74c3c;
@@ -145,22 +165,32 @@
   font-style: italic;
 }
 
+/* ============================
+   RESPONSIVE
+   ============================ */
+
+/* Para pantallas pequeñas */
 @media (max-width: 600px) {
+
+  /* El modal ocupa toda la pantalla */
   .checkout-content {
     max-width: 100%;
     max-height: 100vh;
     border-radius: 0;
   }
 
+  /* Inputs en una sola columna */
   .form-row {
     grid-template-columns: 1fr;
   }
 
+  /* Ajuste de título */
   .checkout-content h2 {
     padding: 1.5rem 1rem 0.75rem;
     font-size: 1.3rem;
   }
 
+  /* Ajuste de formulario */
   .checkout-form {
     padding: 1rem;
   }
