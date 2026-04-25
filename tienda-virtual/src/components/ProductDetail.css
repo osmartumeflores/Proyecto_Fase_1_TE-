@@ -1,88 +1,103 @@
+/* Contenedor principal del detalle del producto */
 .product-detail {
-  padding: 40px;
-  background-color: #f5f5f5;
-  min-height: 80vh;
+  padding: 40px; /* Espaciado interno */
+  background-color: #f5f5f5; /* Fondo gris claro */
+  min-height: 80vh; /* Altura mínima de la pantalla */
 }
 
+/* Tarjeta principal que contiene imagen e información */
 .product-detail-container {
-  display: flex;
-  gap: 50px;
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  align-items: center;
+  display: flex; /* Alinea en fila */
+  gap: 50px; /* Espacio entre imagen y texto */
+  background: white; /* Fondo blanco */
+  padding: 30px; /* Espaciado interno */
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra suave */
+  align-items: center; /* Centra verticalmente */
 }
 
+/* Imagen del producto */
 .product-detail-image img {
-  width: 350px;
-  border-radius: 10px;
-  transition: transform 0.3s;
+  width: 350px; /* Tamaño de la imagen */
+  border-radius: 10px; /* Bordes redondeados */
+  transition: transform 0.3s; /* Animación suave */
 }
 
+/* Efecto al pasar el mouse sobre la imagen */
 .product-detail-image img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Zoom ligero */
 }
 
+/* Contenedor de la información del producto */
 .product-detail-info {
-  max-width: 500px;
+  max-width: 500px; /* Limita el ancho */
 }
 
+/* Título del producto */
 .product-detail-info h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+  font-size: 28px; /* Tamaño grande */
+  margin-bottom: 10px; /* Espacio inferior */
 }
 
+/* Categoría del producto */
 .category {
-  color: gray;
+  color: gray; /* Color gris */
   font-size: 14px;
   margin-bottom: 10px;
 }
 
+/* Descripción del producto */
 .description {
-  margin: 15px 0;
-  line-height: 1.5;
+  margin: 15px 0; /* Espaciado vertical */
+  line-height: 1.5; /* Mejora lectura */
 }
 
+/* Precio del producto */
 .price {
-  font-size: 26px;
-  color: #2ecc71;
+  font-size: 26px; /* Tamaño grande */
+  color: #2ecc71; /* Color verde */
   margin: 15px 0;
-  font-weight: bold;
+  font-weight: bold; /* Negrita */
 }
 
+/* Texto de stock */
 .stock {
-  margin-bottom: 15px;
+  margin-bottom: 15px; /* Espacio inferior */
 }
 
+/* Botón de agregar al carrito */
 .add-to-cart-btn {
-  background: #007bff;
-  color: white;
-  padding: 12px 25px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
+  background: #007bff; /* Color azul */
+  color: white; /* Texto blanco */
+  padding: 12px 25px; /* Tamaño del botón */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor tipo botón */
+  transition: 0.3s; /* Animación suave */
 }
 
+/* Efecto hover del botón */
 .add-to-cart-btn:hover {
-  background: #0056b3;
+  background: #0056b3; /* Azul más oscuro */
 }
 
+/* Botón deshabilitado */
 .add-to-cart-btn:disabled {
-  background: gray;
-  cursor: not-allowed;
+  background: gray; /* Color gris */
+  cursor: not-allowed; /* Cursor bloqueado */
 }
 
+/* Botón para volver atrás */
 .back-btn {
-  margin-bottom: 20px;
-  padding: 8px 15px;
-  background: transparent;
-  border: 1px solid #ccc;
+  margin-bottom: 20px; /* Espacio inferior */
+  padding: 8px 15px; /* Tamaño */
+  background: transparent; /* Fondo transparente */
+  border: 1px solid #ccc; /* Borde gris */
   border-radius: 8px;
   cursor: pointer;
 }
 
+/* Hover del botón volver */
 .back-btn:hover {
-  background: #eee;
+  background: #eee; /* Fondo gris claro */
 }

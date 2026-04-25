@@ -1,62 +1,72 @@
+/* Contenedor principal de la tarjeta del producto */
 .product-card {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: white; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta contenido que se desborde */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animación suave */
 }
 
+/* Efecto al pasar el mouse */
 .product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px); /* Se eleva un poco */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra más fuerte */
 }
 
+/* Imagen del producto */
 .product-image {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
+  width: 100%; /* Ocupa todo el ancho */
+  height: 250px; /* Altura fija */
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
   display: block;
 }
 
+/* Contenedor de la información */
 .product-info {
-  padding: 1.5rem;
+  padding: 1.5rem; /* Espaciado interno */
 }
 
+/* Nombre del producto */
 .product-info h3 {
   margin: 0 0 0.5rem;
   font-size: 1.1rem;
-  color: #2c3e50;
+  color: #2c3e50; /* Color oscuro */
 }
 
+/* Categoría del producto */
 .product-category {
-  color: #667eea;
+  color: #667eea; /* Color llamativo */
   font-size: 0.85rem;
   margin: 0.25rem 0;
   font-weight: bold;
 }
 
+/* Descripción del producto */
 .product-description {
-  color: #666;
+  color: #666; /* Color gris */
   font-size: 0.9rem;
   margin: 0.75rem 0;
 }
 
+/* Sección inferior (precio + botón) */
 .product-footer {
-  display: flex;
-  justify-content: space-between;
+  display: flex; /* Alineación en fila */
+  justify-content: space-between; /* Espacio entre elementos */
   align-items: center;
   margin: 1rem 0;
-  gap: 1rem;
+  gap: 1rem; /* Espacio entre elementos */
 }
 
+/* Precio del producto */
 .product-price {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #764ba2;
+  color: #764ba2; /* Color destacado */
 }
 
+/* Botón de agregar al carrito */
 .add-to-cart-btn {
-  background-color: #667eea;
+  background-color: #667eea; /* Color principal */
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -64,30 +74,34 @@
   cursor: pointer;
   font-size: 0.9rem;
   transition: background-color 0.3s;
-  flex-grow: 1;
+  flex-grow: 1; /* Ocupa espacio disponible */
 }
 
+/* Hover del botón (solo si está activo) */
 .add-to-cart-btn:hover:not(:disabled) {
-  background-color: #764ba2;
+  background-color: #764ba2; /* Cambia de color */
 }
 
+/* Botón deshabilitado */
 .add-to-cart-btn:disabled {
-  background-color: #ccc;
+  background-color: #ccc; /* Gris */
   cursor: not-allowed;
 }
 
+/* Texto de stock */
 .product-stock {
   font-size: 0.85rem;
-  color: #27ae60;
+  color: #27ae60; /* Verde */
   margin: 0.5rem 0 0;
 }
 
+/* Responsive para pantallas pequeñas */
 @media (max-width: 768px) {
   .product-image {
-    height: 200px;
+    height: 200px; /* Reduce tamaño de imagen */
   }
 
   .product-info {
-    padding: 1rem;
+    padding: 1rem; /* Menos padding */
   }
 }

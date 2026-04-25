@@ -1,91 +1,85 @@
-/* Reset y estilos base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; } /* reset global del navegador */
 
 :root {
-  --primary-color: #667eea;
-  --primary-dark: #764ba2;
-  --success-color: #27ae60;
-  --danger-color: #e74c3c;
-  --text-color: #2c3e50;
-  --text-light: #666;
-  --bg-color: #f5f5f5;
-  --white: #ffffff;
-  --border-color: #ddd;
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.15);
-  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --primary-color: #667eea; /* color principal */
+  --primary-dark: #764ba2; /* color secundario oscuro */
+  --success-color: #27ae60; /* color éxito */
+  --danger-color: #e74c3c; /* color error */
+  --text-color: #2c3e50; /* color texto principal */
+  --text-light: #666; /* texto secundario */
+  --bg-color: #f5f5f5; /* fondo general */
+  --white: #ffffff; /* blanco base */
+  --border-color: #ddd; /* bordes */
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* sombra suave */
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.15); /* sombra fuerte */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* fuente global */
+
+  --text-h: #2c3e50; /* color títulos */
+  --code-bg: #f4f4f4; /* fondo código */
 }
 
 html, body {
-  font-family: var(--font-family);
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  font-family: var(--font-family); /* fuente global */
+  font-size: 16px; /* tamaño base */
+  line-height: 1.5; /* espaciado de líneas */
+  color: var(--text-color); /* color texto */
+  background-color: var(--bg-color); /* fondo página */
 }
 
 #root {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  width: 100%; /* ancho completo */
+  min-height: 100vh; /* altura pantalla completa */
+  display: flex; /* flexbox */
+  flex-direction: column; /* dirección vertical */
 }
 
 button {
-  font-family: var(--font-family);
-  cursor: pointer;
+  font-family: var(--font-family); /* fuente uniforme */
+  cursor: pointer; /* cursor tipo mano */
 }
 
 input {
-  font-family: var(--font-family);
+  font-family: var(--font-family); /* fuente uniforme */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--text-color);
+  color: var(--text-color); /* color títulos */
 }
 
-/* Scrollbar personalización */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 8px; /* ancho scroll */
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f1f1f1; /* fondo del scroll */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #667eea;
-  border-radius: 4px;
+  background: #667eea; /* color barra scroll */
+  border-radius: 4px; /* bordes redondeados */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #764ba2;
+  background: #764ba2; /* color al pasar mouse */
 }
 
-/* Responsive base */
 @media (max-width: 1024px) {
   html, body {
-    font-size: 15px;
+    font-size: 15px; /* ajuste tablets */
   }
 }
 
 @media (max-width: 768px) {
   html, body {
-    font-size: 14px;
+    font-size: 14px; /* ajuste móviles */
   }
-}
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
 }
 
 code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+  font-size: 15px; /* tamaño código */
+  line-height: 135%; /* espaciado código */
+  padding: 4px 8px; /* espacio interno */
+  background: var(--code-bg); /* fondo código */
+  border-radius: 4px; /* bordes suaves */
+  color: var(--text-h); /* color texto código */
 }
