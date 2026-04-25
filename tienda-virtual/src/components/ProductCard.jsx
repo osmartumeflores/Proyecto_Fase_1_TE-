@@ -1,5 +1,6 @@
 import React from 'react';
 import { useCart } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 import './ProductCard.css';
 
 export const ProductCard = ({ product }) => {
@@ -12,13 +13,31 @@ export const ProductCard = ({ product }) => {
 
   return (
     <div className="product-card">
-      <img src={product.image} alt={product.name} className="product-image" />
+
+      {/* Imagen clickeable */}
+      <Link to={`/product/${product.id}`}>
+        <img 
+          src={product.image} 
+          alt={product.name} 
+          className="product-image" 
+        />
+      </Link>
+
       <div className="product-info">
-        <h3>{product.name}</h3>
+
+        {/* Nombre clickeable */}
+        <Link to={`/product/${product.id}`} className="product-link">
+          <h3>{product.name}</h3>
+        </Link>
+
         <p className="product-category">{product.category}</p>
         <p className="product-description">{product.description}</p>
+
         <div className="product-footer">
-          <span className="product-price">S/.{product.price.toFixed(2)}</span>
+          <span className="product-price">
+            S/ {product.price.toFixed(2)}
+          </span>
+
           <button 
             className="add-to-cart-btn"
             onClick={handleAddToCart}
@@ -27,7 +46,10 @@ export const ProductCard = ({ product }) => {
             {product.stock > 0 ? 'Añadir al carrito' : 'Sin stock'}
           </button>
         </div>
-        <p className="product-stock">En stock: {product.stock}</p>
+
+        <p className="product-stock">
+          En stock: {product.stock}
+        </p>
       </div>
     </div>
   );
