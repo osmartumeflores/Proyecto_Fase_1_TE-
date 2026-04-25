@@ -22,8 +22,8 @@ function App() {
             <Route path="/" element={
               <>
                 <section className="hero-section">
-                  <h1>Bienvenido a TiendaVirtual</h1>
-                  <p>Descubre los mejores productos electrónicos del mercado</p>
+                  <h1>Bienvenido a NovaStore</h1>
+                  <p>Descubre los mejores productos electrónicos del mercado a tu disposición</p>
                 </section>
 
                 <ProductCatalog />
